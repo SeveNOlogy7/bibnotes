@@ -1467,12 +1467,12 @@ export default class MyPlugin extends Plugin {
 
 
 			// ADD FORMATTING TO THE ZOTERO INLINE TAGS
-			//if the hash is added to the tag, then remove empty spaces
+			//if the hash is added to the tag, then replace empty spaces with '_'
 			if (typeof lineElements.inlineTagsArray == 'undefined') { lineElements.inlineTagsArray = [] }
 
 			if (this.settings.isTagHash == true) {
 				for (let index = 0; index < lineElements.inlineTagsArray.length; index++) {
-					lineElements.inlineTagsArray[index] = lineElements.inlineTagsArray[index].replace(/ /g, "")
+					lineElements.inlineTagsArray[index] = lineElements.inlineTagsArray[index].replace(/ /g, "_")
 				}
 				//{}
 			}
